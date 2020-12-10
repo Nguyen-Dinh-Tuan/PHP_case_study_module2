@@ -11,12 +11,12 @@ $resul = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 <body>
-<h3 style="text-align: center">Nhập Điểm Học Sinh</h3>
+<h3 style="text-align: center;color: white">Nhập Điểm Học Sinh</h3>
 <table align="center" id="tb" class="table" style="width: 400px;align-items: center">
     <form   method="post">
         <tr>
             <td>
-                <label >Mã HS</label>
+                <label style="color: white" >Mã HS</label>
 
                 <select class="form-control" name="studentCode" >
                     <?php foreach ($resul as $key => $value):?>
@@ -25,17 +25,17 @@ $resul = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 </select>
             </td>
             <td>
-                <label >Môn Toán</label>
+                <label style="color: white" >Môn Toán</label>
 
                 <input type="text" name="toan"  placeholder="Nhập điểm môn Toán">
             </td>
             <td>
-                <label >Môn Văn</label>
+                <label style="color: white">Môn Văn</label>
 
                 <input type="text" name="van"  placeholder="Nhập điểm môn Văn">
             </td>
             <td>
-                <label >Môn Anh</label>
+                <label style="color: white">Môn Anh</label>
 
                 <input type="text"  name="anh"  placeholder="Nhập điểm môn Anh">
             </td>
@@ -50,8 +50,13 @@ $resul = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </form>
 
 </table>
+<style>
+    body{
+        background-image: url("https://anhdep123.com/wp-content/uploads/2020/05/hinh-nen-4k-cay-cau-dep-1024x683.jpg");
+    }
+</style>
 
 </body>
-<footer align="center" class="container" style="background-color: black;color: white" >
-    <p>© Student Manager 2020-2021</p>
-</footer>
+<!--<footer align="center" class="container" style="background-color: black;color: white" >-->
+<!--    <p>© Student Manager 2020-2021</p>-->
+<!--</footer>-->

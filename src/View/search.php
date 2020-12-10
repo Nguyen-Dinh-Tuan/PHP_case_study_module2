@@ -1,3 +1,7 @@
+<form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+</form>
 <?php
 
 ?>
@@ -16,11 +20,11 @@
     <?php foreach ($students as $key => $value):?>
         <tr>
             <td><?php echo ++$key;?></td>
-            <td><?php echo $value->getIdClass();?></td>
-            <td><?php echo $value->getName();?></td>
-            <td><?php echo $value->getGender();?></td>
-            <td><?php echo $value->getDate();?></td>
-            <td><?php echo $value->getAddress();?></td>
+            <td><?php echo $value['id_class'];?></td>
+            <td><?php echo $value['NameStudent'];?></td>
+            <td><?php echo $value['Gender'];?></td>
+            <td><?php echo $value['Date'];?></td>
+            <td><?php echo $value['Address'];?></td>
         </tr>
     <?php endforeach; ?>
 

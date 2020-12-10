@@ -16,13 +16,14 @@ class SubjectModel
         $sql= "SELECT * FROM `Subject`";
         $stmt = $this->DBConnect->query($sql);
         $data = $stmt->fetchAll();
-        $subjects = [];
-        foreach ($data as $item){
-            $subject = new Subject($item["SubjectName"]);
-            $subject->setIdSubject($item["id_Subject"]);
-            array_push($subjects,$subject);
-        }
-        return $subjects;
+//        $subjects = [];
+//        foreach ($data as $item){
+//            $subject = new Subject($item["SubjectName"]);
+//            $subject->setIdSubject($item["id_Subject"]);
+//            array_push($subjects,$subject);
+//        }
+//        return $subjects;
+        return $data;
     }
     function addPoint($point){
         $sql = "INSERT INTO `Point`( `id_Subject`, `id_Student`, `Semester_point`) VALUES (:id_Subject,:id_Student,:id_Student)";

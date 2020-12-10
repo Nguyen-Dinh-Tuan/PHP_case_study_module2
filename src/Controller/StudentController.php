@@ -50,11 +50,14 @@ class StudentController
     }
     public function search()
     {
-        if ($_SERVER['REQUEST_METHOD'] == "POST") {
-            $search = "%" . $_REQUEST['search'] . "%";
-            $students = $this->studentModel->search($search);
-            include_once "src/View/search.php";
-        }
+//        if ($_SERVER['REQUEST_METHOD'] == "POST") {
+//            $search = "%" . $_REQUEST['search'] . "%";
+//            $students = $this->studentModel->search($search);
+//            include_once "src/View/search.php";
+//        }
+        $search = '%'. $_REQUEST['search']. '%';
+        $students = $this->studentModel->search($search);
+        include 'src/View/search.php';
     }
     public function edit(){
         if($_SERVER['REQUEST_METHOD']== 'GET'){
@@ -63,16 +66,22 @@ class StudentController
             include_once "src/View/edit.php";
         }
         else{
-            $id= $_REQUEST['id'];
+
+          $id= $_REQUEST['id'];
           $id_class = $_REQUEST['id_class'];
           $NameStudent = $_REQUEST['NameStudent'];
           $Gender = $_REQUEST['Gender'];
           $Date = $_REQUEST['Date'];
           $Address = $_REQUEST['Address'];
+
+
           $newStudent = new Students($id_class,$NameStudent,$Gender,$Date,$Address);
-          $newStudent->setId($id);
-          $this->studentModel->editStudent($newStudent);
-          header('location:index.php');
+
+            $newStudent->setId($id);
+
+
+            $this->studentModel->editStudent($newStudent);
+          header('location:index.php?page=list-student');
 
         }
     }

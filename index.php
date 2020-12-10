@@ -24,9 +24,11 @@
                 <div class="col-sm-4 offset-md-1 py-4">
                     <h4 class="text-white">Contact</h4>
                     <ul class="list-unstyled">
+                        <li class="nav-item"><a href="index.php?page=guest" class="nav-link">HOME</a></li>
+
                         <li class="nav-item"><a href="index.php?page=list-student" class="nav-link">LIST STUDENT</a></li>
                         <li class="nav-item"><a href="index.php?page=list-point" class="nav-link">LIST POINT</a></li>
-
+                        <li class="nav-item"><a href="index.php?page=list-subject" class="nav-link">LIST SUBJECT</a></li>
                         <li><a href="https://www.facebook.com/" class="text-white">FACEBOOK ME</a></li>
                     </ul>
                 </div>
@@ -49,7 +51,7 @@
 <?php
 require __DIR__."/vendor/autoload.php";
 $studentController = new \QLD\Controller\StudentController();
-//$subjectController = new \QLD\Controller\SubjectController();
+$subjectController = new \QLD\Controller\SubjectController();
 $pointController = new \QLD\Controller\PointController();
 $page = isset($_REQUEST["page"])? $_REQUEST["page"]: NULL;
 
@@ -66,17 +68,25 @@ switch ($page){
     case "list-student":
         $studentController->showStudent();
         break;
+    case "list-subject":
+        $subjectController->showSubject();
+        break;
     case "delete-student":
         $studentController->deleteStudent();
         break;
     case "search":
-        $student = isset($_REQUEST['name']) ? $_REQUEST['name'] : "";
+//        $student = isset($_REQUEST['name']) ? $_REQUEST['name'] : "";
         $studentController->search();
         break;
     case "edit":
         $studentController->edit();
         break;
-    default:
+//    default:
+//        $studentController->showGuest();
+//        break;
+    case "guest":
         $studentController->showGuest();
         break;
+    default:
+        include "login.php";
 }

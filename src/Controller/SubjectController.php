@@ -16,7 +16,7 @@ class SubjectController
         $subjects = $this->subjectModel->getAll();
         include_once "src/View/listSubject.php";
     }
-    function addPoint(){
-
-    }
+//    function addPoint(){
+//
+//    }
 }

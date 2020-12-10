@@ -12,7 +12,8 @@ class Students
     protected $gender;
     protected $date;
     protected $address;
-    public function __construct($id_class,$_name,$_gender,$_date,$_address)
+
+    public function __construct($id_class, $_name, $_gender, $_date, $_address)
     {
         $this->id_class = $id_class;
         $this->name = $_name;
@@ -116,7 +117,6 @@ class Students
     {
         $this->address = $address;
     }
-
 
 
 }

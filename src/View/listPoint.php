@@ -20,11 +20,11 @@
     }
 
 </style>
-<body style="background-color: lightskyblue">
+<body style="background-color: lightskyblue; background: blanchedalmond">
 <div class="edu_nav">
     <div class="container">
         <nav class="navbar navbar-expand-md navbar-light bg-faded">
-            <a class="navbar-brand" href="index.php"><img src="style/images/logo1.jpg" alt="logo"></a>
+<!--            <a class="navbar-brand" href="index.php"><img src="style/images/logo1.jpg" alt="logo"></a>-->
             <div class="collapse navbar-collapse main-menu" id="navbarSupportedContent">
                 <ul class="navbar-nav nav lavalamp ml-auto menu">
 
@@ -40,13 +40,13 @@
 </div>
 
 <h2 style="text-align: center;color: black; background: blanchedalmond">Danh Sách Điểm</h2>
-<a href="index.php?page=add-point" class="btn btn-primary btn-xs pull-right">Thêm điểm học sinh</a>
+<a style="background: blanchedalmond;background-color: black" href="index.php?page=add-point" class="btn btn-primary btn-xs pull-right">Thêm điểm học sinh</a>
 
 <table class="table" style="background-color: whitesmoke">
     <thead class="thead-dark">
-    <tr>
+    <tr style="background-color: aquamarine">
         <td scope="col">STT</td>
-        <td scope="col">ID_student</td>
+        <td scope="col">ID_Student</td>
         <td scope="col">Math</td>
         <td scope="col">Literature</td>
         <td scope="col">English</td>

@@ -12,37 +12,33 @@
 </head>
 <style>
     body{
-        background-image: url("https://vntime.org/wp-content/uploads/2020/04/H%C3%ACnh-n%E1%BB%81n-m%C3%A1y-t%C3%ADnh-%C4%91%E1%BA%B9p-nh%E1%BA%A5t-ch%E1%BB%A7-%C4%91%E1%BB%81-Hallow-Knight-1024x576.jpeg");
+        background-image: url("https://asean2010.vn/wp-content/uploads/2020/04/hinh-nen-may-tinh-don-gian.jpg");
     }
 </style>
 <body>
 <form method="post" enctype="multipart/form-data">
     <div class="form-group">
-        <label style="color: aliceblue" for="formGroupExampleInput">Ma Lop</label>
+        <label style="color: black" for="formGroupExampleInput">Mã Lớp</label>
         <input type="text" name="id_class" value="<?php echo $student['id_class']?>" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
     </div>
     <div class="form-group">
-        <label style="color: aliceblue" for="formGroupExampleInput2">Ten Hoc Sinh</label>
+        <label style="color: black" for="formGroupExampleInput2">Tên Học Sinh</label>
         <input type="text" name="NameStudent" value="<?php echo $student['NameStudent']?>" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
     </div>
     <div class="form-group">
-        <label style="color: honeydew" for="formGroupExampleInput">Gioi Tinh</label>
+        <label style="color: black" for="formGroupExampleInput">Giới Tính</label>
         <input type="text" name="Gender" value="<?php echo $student['Gender']?>" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
     </div>
     <div class="form-group">
-        <label style="color: honeydew" for="formGroupExampleInput">Ngay Sinh</label>
+        <label style="color: black" for="formGroupExampleInput">Ngày Sinh</label>
         <input type="text" name="Date" value="<?php echo $student['Date']?>" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
     </div>
     <div class="form-group">
-        <label style="color: honeydew" for="formGroupExampleInput">Dia Chi</label>
+        <label style="color: black" for="formGroupExampleInput">Địa Chỉ</label>
         <input type="text" name="Address" value="<?php echo $student['Address']?>" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
     </div>
-<!--    <div class="form-group">-->
-<!--        <label style="color: aliceblue" for="formGroupExampleInput">Image</label>-->
-<!--        <input type="file" name="img" value="--><?php //echo $student['img']?><!--">-->
-<!--    </div>-->
-    <button type="submit">Enter</button>
-<!--    </div>-->
+
+    <button type="submit">Xác Nhận</button>
 </form>
 </body>
 </html>

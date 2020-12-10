@@ -24,16 +24,17 @@
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
 <!--                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span>-->
-            <li class="nav-item"><a href="index.php?page=list-student" class="nav-link">Home</a></li>
+<!--            <li class="nav-item"><a href="index.php?page=list-student" class="nav-link">Home</a></li>-->
 
-            </li>
-            <!--            <li class="nav-item">-->
-            <!--                <a class="nav-link" href="index.php?page=scorelist">Bang Diem</a>-->
-            <!--            </li>-->
+
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                </a>
+<!--                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--                    Dropdown-->
+<!--                </a>-->
+                <td><a class="btn btn-success" href="index.php?page=list-point">Xem điểm</a></td>
+                <a href="index.php?page=add-student" class="btn btn-success">Thêm học sinh</a>
+
+
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="#">Action</a>
                     <a class="dropdown-item" href="#">Another action</a>
@@ -52,22 +53,22 @@
     </div>
 </nav>
 
+
 </body>
 </html>
 <h2 style="text-align: center;color: black; background: blanchedalmond">Danh Sách Học Sinh</h2>
-<a href="index.php?page=add-student" class="btn btn-primary btn-xs pull-right">Thêm học sinh</a>
-
 <table class="table" style="background-color: whitesmoke; color: black">
     <thead class="thead-dark">
-    <tr>
+    <tr STYLE="background-color: greenyellow">
         <td scope="col">STT</td>
         <td scope="col">Mã Lớp</td>
-        <!--            <td>Id</td>-->
         <td scope="col">Tên Học Sinh</td>
         <td scope="col">Giới tính</td>
         <td scope="col">Ngày Sinh</td>
         <td scope="col">Địa Chỉ</td>
-        <td scope="col">Action</td>
+        <td scope="col"></td>
+        <td scope="col"></td>
+        <td scope="col"</td>
     </tr>
     </thead>
     <tbody>
@@ -80,7 +81,7 @@
             <td><?php echo $value->getGender();?></td>
             <td><?php echo $value->getDate();?></td>
             <td><?php echo $value->getAddress();?></td>
-            <td><a class="btn btn-success" href="index.php?page=list-point">Xem điểm</a></td>
+<!--            <td><a class="btn btn-success" href="index.php?page=list-point">Xem điểm</a></td>-->
             <td><a class="btn btn-danger" onclick="return confirm('Bạn có muốn xóa không?')" href="index.php?page=delete-student&id=<?php echo $value->getId();?>">Delete</a></td>
             <td><a class="btn btn-success" href="index.php?page=edit&id=<?php echo $value->getId(); ?>">Edit</a></td>
         </tr>

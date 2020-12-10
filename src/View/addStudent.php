@@ -10,6 +10,11 @@
     <title>Thêm Học Sinh</title>
 </head>
 <body style="background-color:aliceblue">
+<style>
+    body{
+        background-image: url("https://cdn.hipwallpaper.com/i/67/12/lPfKJw.jpg");
+    }
+</style>
 <div class="edu_nav">
     <div class="container">
         <nav class="navbar navbar-expand-md navbar-light bg-faded">
@@ -18,25 +23,14 @@
             <div class="collapse navbar-collapse main-menu" id="navbarSupportedContent">
                 <ul class="navbar-nav nav lavalamp ml-auto menu">
 
-                    <li class="nav-item"><a href="index.php?page=list-student" class="nav-link">LIST STUDENT</a></li>
-                    <li class="nav-item"><a href="index.php?page=list-point" class="nav-link">LIST POINT</a>
+                    <li class="nav-item"><a href="index.php?page=list-student" class="nav-link" style="background-color: white;color: black">LIST STUDENT</a></li>
+                    <li class="nav-item"><a href="index.php?page=list-point" class="nav-link" style="background-color: white;color: black">LIST POINT</a>
                     </li>
 
 
                 </ul>
             </div>
-            <!--            <div class="mr-auto search_area ">-->
-            <!--                <ul class="navbar-nav mx-auto">-->
-            <!--                    <li class="nav-item"><i class="search_btn flaticon-magnifier"></i>-->
-            <!--                        <div id="search">-->
-            <!--                            <button type="button" class="close">×</button>-->
-            <!--                            <form>-->
-            <!--                                <input type="search" value="" placeholder="Search here...."  required/>-->
-            <!--                            </form>-->
-            <!--                        </div>-->
-            <!--                    </li>-->
-            <!--                </ul>-->
-            <!--            </div>-->
+            </div>
         </nav><!-- END NAVBAR -->
     </div>
 </div>
@@ -87,7 +81,7 @@ $resul = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </td>
         </tr>
 
-        <tr>
+        <tr align="center">
             <td>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </td>
